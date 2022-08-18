@@ -8,7 +8,7 @@
 
     <MudDrawerHeader Class="align-center">
         <MudText Typo="Typo.body1">
-            <b>Theme Manager</b>
+            <b>مدیریت تم </b>
         </MudText>
         <MudSpacer />
         <MudIconButton Color="Color.Default"
@@ -24,7 +24,7 @@
         {
             <div class="px-4">
                 <MudSelect Dense="true"
-                           Label="Preset Themes"
+                           Label="تم فعال"
                            T="string"
                            Value="_themeManagerTheme.PresetThemes"
                            ValueChanged="OnPresetThemeChanged"
@@ -47,7 +47,7 @@
                 @if (Configuration.ShowLayoutSection)
                 {
                     <MudTmSection SectionOptions="Configuration.LayoutSectionOptions"
-                                  Title="Layout">
+                                  Title="چیدمان">
                         <MudSlider Max="25"
                                    Min="0"
                                    Step="1"
@@ -65,7 +65,7 @@
                 @if (Configuration.ShowColorSections)
                 {
                     <MudTmSection SectionOptions="Configuration.ColorSectionOptions"
-                                  Title="Colors">
+                                  Title="رنگ ها">
                         @foreach (var item in Configuration.ColorSections.Where(x => x.Value.Display))
                         {
                             <MudTmColorItem ColorChanged="UpdateColor"

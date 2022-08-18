@@ -1,9 +1,9 @@
-namespace MudBlazor.ThemeManager.Models;
+﻿namespace MudBlazor.ThemeManager.Models;
 
 internal static class PresetThemes
 {
-    public const string Custom = "Custom";
-    public const string MuiDark = "Mui Dark";
+    public const string Custom = "سفارشی ";
+    public const string MuiDark = "تاریک ";
 
     public static Palette GetDefaultLightPalette()
     {

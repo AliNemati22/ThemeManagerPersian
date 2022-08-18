@@ -1,15 +1,16 @@
-using System.ComponentModel;
+﻿using System.ComponentModel;
 
 namespace MudBlazor.ThemeManager.Enums;
 
 public enum ColorTitles
 {
-    [Description("Primary")] Primary,
-    [Description("Secondary")] Secondary,
-    [Description("Tertiary")] Tertiary,
-    [Description("Info")] Info,
-    [Description("Success")] Success,
-    [Description("Warning")] Warning,
-    [Description("Error")] Error,
-    [Description("Dark")] Dark,
+    [Description("اصلی ")] Primary,
+    [Description("ثانویه")] Secondary,
+    [Description("سومین")] Tertiary,
+    [Description("اعلان")] Info,
+    [Description("موفق")] Success,
+    [Description("هشدار")] Warning,
+    [Description("ایراد")] Error,
+    [Description("تاریک")] Dark,
+   
 }
