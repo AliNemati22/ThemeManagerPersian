@@ -24,6 +24,7 @@ public class ThemeManagerConfiguration
     public bool ShowPresetThemeSection { get; set; } = true;
     public bool ShowModeSection { get; set; } = true;
     public bool ShowLayoutSection { get; set; }
+    public bool ShowFontSizeSection { get; set; }
     public SectionOptions LayoutSectionOptions { get; set; }
     public bool ShowColorSections { get; set; } = true;
     public SectionOptions ColorSectionOptions { get; set; } = new() {DefaultOpen = true};

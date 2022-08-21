@@ -4,6 +4,7 @@ internal static class PresetThemes
 {
     public const string Custom = "سفارشی ";
     public const string MuiDark = "تاریک ";
+    public const string Weak = "کم توان  ";
 
     public static Palette GetDefaultLightPalette()
     {
@@ -11,6 +12,9 @@ internal static class PresetThemes
 
         return palette;
     }
+
+   
+
 
     public static Palette GetDefaultDarkPalette()
     {
@@ -73,6 +77,60 @@ internal static class PresetThemes
             LayoutProperties = new LayoutProperties()
             {
                 DefaultBorderRadius = "12px",
+            },
+
+            Typography = new Typography()
+            {
+                Default = new Default()
+                {
+                    FontFamily = new[] { "Shabnam", "Shabnam", "Shabnam", "sans-serif" }
+                }
+            }
+        };
+
+        return theme;
+    }
+
+
+    public static MudTheme GetWeakTheme()
+    {
+        var theme = new MudTheme()
+        {
+            Palette = new Palette()
+            {
+                Primary = "#007fff",
+                Tertiary = "#594AE2",
+                Black = "#27272f",
+                Background = "#0a1929",
+                BackgroundGrey = "#001e3c",
+                Surface = "#001e3c",
+                DrawerBackground = "#0a1929",
+                DrawerText = "rgba(255,255,255, 0.50)",
+                DrawerIcon = "rgba(255,255,255, 0.50)",
+                AppbarBackground = "rgb(10, 25, 41)",
+                AppbarText = "rgba(255,255,255, 0.70)",
+                TextPrimary = "rgba(255,255,255, 0.70)",
+                TextSecondary = "rgba(255,255,255, 0.50)",
+                ActionDefault = "rgb(173, 173, 177)",
+                ActionDisabled = "rgba(0, 127, 255, 0.40)",
+                ActionDisabledBackground = "rgba(0, 127, 255, 0.26)",
+                Divider = "rgba(0, 127, 255, 0.12)",
+                DividerLight = "rgba(20, 127, 255, 0.06)",
+                TableLines = "rgba(0, 127, 255, 0.12)",
+                LinesDefault = "rgba(0, 127, 255, 0.12)",
+                LinesInputs = "rgba(0, 127, 255, 0.3)",
+                TextDisabled = "rgba(0, 127, 255, 0.2)"
+            },
+            LayoutProperties = new LayoutProperties()
+            {
+                DefaultBorderRadius = "12px",
+            },
+           Typography = new Typography()
+            {
+                Default = new Default()
+                {
+                    FontFamily = new[] { "Shabnam", "Shabnam", "Shabnam", "sans-serif" }
+                }
             }
         };
 

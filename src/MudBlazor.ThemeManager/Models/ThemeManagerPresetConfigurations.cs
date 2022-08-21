@@ -12,6 +12,7 @@ public static class ThemeManagerPresetConfigurations
         var themeManagerOptions = new ThemeManagerConfiguration
         {
             ShowLayoutSection = true,
+            ShowFontSizeSection = true,
             ShowColorSections = true
         };
 
@@ -49,6 +50,7 @@ public static class ThemeManagerPresetConfigurations
         var themeManagerOptions = new ThemeManagerConfiguration
         {
             ShowPresetThemeSection = false,
+            ShowFontSizeSection = false,
             ShowColorSections = true,
         };
 

@@ -1,6 +1,6 @@
 ﻿@using MudBlazor.ThemeManager.Models
 @inherits LayoutComponentBase
-
+<MudRTLProvider RightToLeft="true"> 
 <MudThemeProvider Theme="_theme" />
 <MudDialogProvider />
 <MudSnackbarProvider />
@@ -30,7 +30,7 @@
         </div>
         <MudIconButton Color="Color.Inherit"
                        Edge="Edge.End"
-                       Icon="@Icons.Material.Filled.MoreVert" />
+                       Icon="@Icons.Filled.Accessible" />
     </MudAppBar>
     <MudDrawer @bind-Open="@_drawerOpen"
                Elevation="1">
@@ -55,7 +55,7 @@
         </MudContainer>
     </MudMainContent>
 </MudLayout>
-
+</MudRTLProvider>
 @code {
 
     private readonly Dictionary<string, ThemeManagerConfiguration> _themeManagerConfigurations = new()

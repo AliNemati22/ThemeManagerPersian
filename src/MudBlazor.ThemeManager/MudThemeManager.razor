@@ -31,6 +31,7 @@
                            Variant="Variant.Outlined">
                     <MudSelectItem Value="@(PresetThemes.Custom)" />
                     <MudSelectItem Value="@(PresetThemes.MuiDark)" />
+                    <MudSelectItem Value="@(PresetThemes.Weak)" />
                 </MudSelect>
             </div>
         }
@@ -61,7 +62,23 @@
                         </MudSlider>
                     </MudTmSection>
                 }
-
+                @if (Configuration.ShowFontSizeSection)
+                {
+                    <MudTmSection SectionOptions="Configuration.LayoutSectionOptions"
+                                  Title="فونت">
+                        <MudSlider Max="25"
+                                   Min="0"
+                                   Step="1"
+                                   T="int"
+                                   Value="@_themeManagerTheme.DefaultFontSizeAsInt"
+                                   ValueChanged="UpdateBorderRadius">
+                            <MudText Class="mb-2"
+                                     Typo="Typo.body2">
+                                <b> @($"اندازه فونت: {_themeManagerTheme.DefaultFontSizeAsInt}px")</b>
+                            </MudText>
+                        </MudSlider>
+                    </MudTmSection>
+                }
                 @if (Configuration.ShowColorSections)
                 {
                     <MudTmSection SectionOptions="Configuration.ColorSectionOptions"

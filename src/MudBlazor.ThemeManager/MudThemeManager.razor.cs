@@ -64,6 +64,7 @@ public partial class MudThemeManager
     protected override async Task OnInitializedAsync()
     {
         _themeManagerTheme.PresetThemes = Configuration.DefaultPresetThemeSelected;
+      
         _themeManagerTheme.Mode = Configuration.DefaultMode;
         _themeManagerTheme.Palette.SetThemeManagerThemePalette(Theme.Palette);
         _themeManagerTheme.LayoutProperties = Theme.LayoutProperties;
@@ -83,6 +84,7 @@ public partial class MudThemeManager
         {
             PresetThemes.Custom => PresetThemes.Custom,
             PresetThemes.MuiDark => PresetThemes.MuiDark,
+            PresetThemes.Weak => PresetThemes.Weak,
             _ => PresetThemes.Custom
         };
 
@@ -130,9 +132,24 @@ public partial class MudThemeManager
         await UpdateTheme();
     }
 
+    private async Task UpdateFontColor(Color fontColor)
+    {
+
+        _themeManagerTheme.FontSetting.Body1.FontSize = "12";
+
+        await UpdateTheme();
+    }
+
     private async Task UpdateBorderRadius(int value)
     {
         _themeManagerTheme.DefaultBorderRadiusAsInt = value;
+        _themeManagerTheme.LayoutProperties.DefaultBorderRadius = $"{value}px";
+        await UpdateTheme();
+    }
+
+    private async Task UpdateFontSize(int value)
+    {
+        _themeManagerTheme.DefaultFontSizeAsInt = value;
         _themeManagerTheme.LayoutProperties.DefaultBorderRadius = $"{value}px";
         await UpdateTheme();
     }
@@ -159,8 +176,13 @@ public partial class MudThemeManager
                 Theme.LayoutProperties = _themeManagerTheme.LayoutProperties;
                 
                 break;
+
             case PresetThemes.MuiDark:
                 Theme = PresetThemes.GetMuiDarkTheme();
+                break;
+
+            case PresetThemes.Weak:
+                Theme = PresetThemes.GetWeakTheme();
                 break;
         }
         
